@@ -60,5 +60,5 @@ script:
   - python -c 'import os,sys,fcntl; flags = fcntl.fcntl(sys.stdout, fcntl.F_GETFL); print(flags&os.O_NONBLOCK);'
 
   # Make wheel using default python
-  - bash -e scripts/make_wheel.sh
-  - bash -e scripts/test_wheel.sh --wheel-path=build/dist/*.whl 
+  - bash -e scripts/build.sh
+  - bash -e scripts/test.sh --wheel-path=build/dist/*.whl 
